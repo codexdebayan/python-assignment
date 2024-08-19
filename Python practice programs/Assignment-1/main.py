@@ -40,7 +40,7 @@ def main():
     
     cursor = connection.cursor()
     
-    query = "SELECT * FROM employees"
+    query = "select count(*)  FROM employees"
     
     for chunk in fetch_large_data(cursor, query):
         process_data(chunk)
