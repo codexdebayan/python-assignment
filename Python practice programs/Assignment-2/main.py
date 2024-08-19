@@ -1,5 +1,8 @@
-class Person:
+from abc import abstractmethod, ABC
+
+class Person(ABC):
     # abstract method
+    @abstractmethod
     def get_gender(self):
         pass
 
