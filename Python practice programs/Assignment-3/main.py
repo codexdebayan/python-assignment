@@ -1,7 +1,6 @@
 # With a given list [12,24,35,24,88,120,155,88,120,155], write a program to print this list after removing all duplicate values with original order reserved.
 # Hint: Use set() to store a number of values without duplicates.
 
-list = [12,24,35,24,88,120,155,88,120,155]
 
 # ----------------Method - 1 ------------------
 # seen = set()
@@ -15,6 +14,7 @@ list = [12,24,35,24,88,120,155,88,120,155]
 
 # ----------------Method - 2 ------------------a
 
+list = [12,24,35,24,88,120,155,88,120,155]
 seen = set()
 
 for i in list:
