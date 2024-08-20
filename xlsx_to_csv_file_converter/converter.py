@@ -3,6 +3,7 @@ import sys
 import os
 from pathlib import Path
 
+
 def convert_xlsx_to_csv(file_path):
     # Ensure the input file exists
     if not os.path.isfile(file_path):
@@ -29,6 +30,7 @@ def convert_xlsx_to_csv(file_path):
 
     except Exception as e:
         print(f"An error occurred: {e}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
