@@ -1,6 +1,8 @@
+# Ignor all test files
 *test.py
 
-
+# Ignore all .csv files 
+*.csv
 # Ignore the virtual environment directory
 .venv/
 
