@@ -34,23 +34,6 @@ def test_get_customer(client):
     assert response.status_code == 200
     assert "application/json" in response.content_type
 
-# def test_add_customer(client):
-#     data = {
-#         "Address": "Obere Str. 5",
-#         "City": "Berlin",
-#         "CompanyName": "Alfreds Futterkiste",
-#         "ContactName": "Maria Sanders",
-#         "ContactTitle": "Sales Executive",
-#         "Country": "Germany",
-#         "CustomerID": "NNWID",
-#         "Fax": "030-0076545",
-#         "Phone": "030-0074321",
-#         "PostalCode": "12209",
-#         "Region": "NaN",
-#     }
-#     response = client.post("/customers", json=data)
-#     assert response.status_code == 201
-#     assert response.json["CustomerID"] == "NNWID"
 
 def test_add_customer(client):
     data = {

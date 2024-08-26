@@ -1,9 +1,17 @@
+import os
 import pandas as pd
 import pycountry_convert as pc
 
+# Get the directory where the script is located
+script_dir = os.path.dirname(os.path.realpath(__file__))
+
+# Construct the file paths
+survey_path = os.path.join(script_dir, 'survey_results_public.csv')
+schema_path = os.path.join(script_dir, 'survey_results_schema.csv')
+
 # Step 1: Load the Data
-survey_data = pd.read_csv("survey_results_public.csv")
-schema_data = pd.read_csv('survey_results_schema.csv')
+survey_data = pd.read_csv(survey_path)
+schema_data = pd.read_csv(schema_path)
 
 # Step 2: Average Age When Developers First Coded
 survey_data['Age1stCode'] = pd.to_numeric(survey_data['Age1stCode'], errors='coerce')

@@ -1,5 +1,5 @@
 ProductID,ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued
-1,dict_values(['Garam-chai']),1,1,10 boxes x 20 bags,18.0,39,0,10,0
+1,Garam-chai,1,1,10 boxes x 20 bags,18.0,39,0,10,0
 2,Coffee,1,1,24 - 12 oz bottles,19.0,17,40,25,True
 3,Cofee-garam,1,2,12 - 550 ml bottles,10.0,13,70,25,0
 4,Chef Anton's Cajun Seasoning,2,2,48 - 6 oz jars,22.0,53,0,0,0
@@ -74,5 +74,7 @@ ProductID,ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInSto
 73,Röd Kaviar,17,8,24 - 150 g jars,15.0,101,0,5,0
 74,Longlife Tofu,4,7,5 kg pkg.,10.0,4,20,5,0
 75,Rhönbräu Klosterbier,12,1,24 - 0.5 l bottles,7.75,125,0,25,0
-76,Lakkalikööri,23,1,500 ml,18.0,57,0,20,0
-77,Original Frankfurter grüne Soße,12,2,12 boxes,13.0,32,0,15,0
+99999,New Product,1,1,10 boxes,20.0,100,0,10,False
+99998,New Product,1,1,10 boxes,20.0,100,0,10,False
+1000,Chai,5,2,10 boxes x 20 bags,18.0,39,0,10,False
+1001,Chai,5,2,10 boxes x 20 bags,18.0,39,0,10,False

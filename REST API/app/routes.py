@@ -37,11 +37,11 @@ def register_routes(app):
         return ProductController.create_product(request.json)
 
     def update_product(product_id):
-        return ProductController.update_product(product_id, request.json)
+        return ProductController.update_product(product_id)
 
     app.add_url_rule('/products', view_func=get_products, methods=['GET'])
-    app.add_url_rule('/products/<int:product_id>', view_func=get_product, methods=['GET'])
     app.add_url_rule('/products', view_func=add_product, methods=['POST'])
+    app.add_url_rule('/products/<int:product_id>', view_func=get_product, methods=['GET'])
     app.add_url_rule('/products/<int:product_id>', view_func=update_product, methods=['PUT'])
 
     # Order Routes
@@ -52,7 +52,7 @@ def register_routes(app):
         return OrderController.get_order_by_id(order_id)
 
     def add_order():
-        return OrderController.create_order(request.json)
+        return OrderController.create_order()
 
     def update_order(order_id):
         return OrderController.update_order(order_id)

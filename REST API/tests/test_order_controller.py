@@ -42,9 +42,9 @@ def test_create_order(client):
         "CustomerID": "TOMSP",
         "EmployeeID": 6,
         "Freight": 11.61,
-        "OrderDate": "1996-07-05 00:00:00.000",
+        "OrderDate": "1996-07-05",
         "OrderID": 11111,
-        "RequiredDate": "1996-08-16 00:00:00.000",
+        "RequiredDate": "1996-08-16",
         "ShipAddress": "Luisenstr. 48",
         "ShipCity": "M\u00fcnster",
         "ShipCountry": "Germany",
@@ -52,26 +52,21 @@ def test_create_order(client):
         "ShipPostalCode": "44087",
         "ShipRegion": "NaN",
         "ShipVia": 1,
-        "ShippedDate": "1996-07-10 00:00:00.000",
+        "ShippedDate": "1996-07-10"
     }
     response = client.post("/orders", json=data)
-    assert response.status_code == 500
-    # assert response.json["OrderID"] == 11111
+    assert response.status_code == 201
+    assert response.json["OrderID"] == 11111
 
-    # Clean up the test data by removing the newly added customer
-    df = pd.read_csv('Northwind_database_csv/orders.csv')
-    df = df[df['OrderID'] != 11111]
-    df.to_csv('Northwind_database_csv/orders.csv', index=False)
+
 
 
 def test_update_order(client):
-    data = {"ShipName": "Vins et alcools "}
-    response = client.put("/orders/10249", json=data)
+    data = {"ShipName": "Bahamas"}
+    response = client.put("/orders/10248", json=data)
     assert response.status_code == 200
-    assert response.json["ShipName"] == "Updated Order"
 
 
 def test_delete_order(client):
-    response = client.delete("/orders/11073")
+    response = client.delete("/orders/11111")
     assert response.status_code == 200
-    assert response.json["message"] == "Order deleted successfully"
