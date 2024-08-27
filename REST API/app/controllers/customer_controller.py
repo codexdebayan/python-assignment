@@ -4,7 +4,6 @@ import pandas as pd
 from flask import jsonify,request
 from app.models.customer_model import CustomerModel
 from marshmallow import ValidationError
-import logging
 
 class CustomerController:
 

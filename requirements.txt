@@ -1,0 +1,7 @@
+moto
+boto3
+flask
+pandas
+pytest
+coverage
+mysql-connector-python
