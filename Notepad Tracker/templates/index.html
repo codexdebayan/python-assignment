@@ -6,13 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notepad Tracker</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
 </head>
 
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        background-color: #D3D3D3;
+        font-family: "Handlee", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .navbar {
+        background-color: #A9A9A9;
+        padding: 10px 10px 10px 20px;
+    }
+
+    .content {
+        padding: 10px;
+        margin-left: 10px;
+    }
+</style>
+
 <body>
-    <h1>Notepad Tracker</h1>
-    <label for="filename">File Name:</label>
-    <input type="text" id="filename" placeholder="Enter file name"><br><br>
-    <textarea id="note" cols="100" rows="20" placeholder="Start writing your note..."></textarea>
+    <div class="navbar">
+        <a href="" style="text-decoration: none;color: white;">
+            <h1 style="background-color: #A9A9A9;">Notepad Tracker</h1>
+        </a>
+    </div>
+    <div class="content">
+        <label for="filename" style="size: 24px;">File Name:</label>
+        <input type="text" id="filename" placeholder="Enter file name"
+            style="padding: 5px; border-radius: 5px;"><br><br>
+        <textarea id="note" cols="150" rows="20" placeholder="Start writing your note..."
+            style="border-radius: 5px;padding: 10px;"></textarea>
+    </div>
 
     <script>
         let timeout = null;

@@ -1,9 +1,15 @@
 from app.controllers.customer_controller import CustomerController
 from app.controllers.product_controller import ProductController
 from app.controllers.order_controller import OrderController
-from flask import request
+from flask import request, render_template
 
 def register_routes(app):
+
+    def home_page():
+        return render_template('index.html')
+    
+    app.add_url_rule('/', view_func=home_page, methods=['GET'])
+
     # Customer Routes
     def get_customers():
         return CustomerController.get_all_customers()
