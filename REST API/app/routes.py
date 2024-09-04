@@ -18,7 +18,7 @@ def register_routes(app):
         return CustomerController.get_customer(customer_id)
 
     def add_customer():
-        return CustomerController.add_customer(request.json)
+        return CustomerController.add_customer()
 
     def update_customer(customer_id):
         return CustomerController.update_customer(customer_id, request.json)
